@@ -1,0 +1,12 @@
+var single = ee.Image('LANDSAT/LC08/C01/T1/LC08_122064_20170617')
+
+var singleB5 = single.select('B5');
+var singleB3 = single.select('B3');
+var RGBTrue = single.select(['B4', 'B3', 'B1']);
+var RGBFalse = single.select(['B5', 'B4', 'B3']);
+
+//VISUALISASI CITRA
+var greyscale = {min: 0, max: 30000, palette: ['black', 'white']};
+var RGBparam = { min: 0, max: 30000,};
+Map.addLayer(RGBTrue, RGBparam, 'TRUE CC');
+Map.addLayer(RGBFalse, RGBparam, 'FALSE CC');
