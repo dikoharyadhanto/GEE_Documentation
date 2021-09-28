@@ -1,28 +1,36 @@
 // --------------Sentinel 2A ------------------------------------
 
-//Menentukan ID Citra, waktu perekaman, fungsi cloud masking, fungsi reducer dan geomer 
-var S2A = ee.ImageCollection("COPERNICUS/S2_SR")
-.filterDate('2021-01-01','2021-09-28')
-.filter(ee.Filter.lt('CLOUD_PIXEL_PERCENTAGE', 90)) //memfilter hanya awan yg cloud percentage 90%
-.map(maskS2clouds) //terapkan fungsi maskS2clouds
-.median() // fungsi reducer
-.clip(geometry) //potong seluas area 'geometry'
-
 // Membuat fungsi cloud mask
-function maskS2clouds(image) { // function maskS2clouds berisi fungsi untuk melakukan masking pixel
-  var qa = image.select('QA60'); //yang dimasking pixel2 yang beracuan di layer QA60
-  var cloudBitMask = 1<<10;
-  var cirrusBitMask = 1<<11;
+function maskS2clouds(image) {
+  var qa = image.select('QA60');
+
+  // Bits 10 and 11 are clouds and cirrus, respectively.
+  var cloudBitMask = 1 << 10;
+  var cirrusBitMask = 1 << 11;
+  
+    // Both flags should be set to zero, indicating clear conditions.
   var mask = qa.bitwiseAnd(cloudBitMask).eq(0)
-  .and(qa.bitwiseAnd(cloudBitMask).eq(0));
-  return image.updateMask(mask).divide(1); //pixel2 yg bolong tersebut ditambal sama perekaman lain
+      .and(qa.bitwiseAnd(cirrusBitMask).eq(0));
+      
+  return image.updateMask(mask).divide(10000);
 }
 
-//Menentukan Composite Band yang Digunakan
-var senRGBTrue = S2A.select(['B4','B3','B2']);
 
-//Menentukan range nilai band dan mode
-var RGBparam = { min: 0, max: 3000,}; //kalo mode berwarna
+//Menentukan ID Citra, waktu perekaman, fungsi cloud masking, fungsi reducer dan geomer 
+var S2A_dataset = ee.ImageCollection('COPERNICUS/S2_SR')
+                    .filterDate('2019-01-01','2021-09-28')
+                    // Pre-filter to get less cloudy granules.
+                    .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE',90))
+                    .map(maskS2clouds)
+                    .median()
+                    .clip(geometry);
+
+//Menentukan Composite Band dan range nilai band yang Digunakan
+var senRGBTrue = {
+  min: 0.0,
+  max: 0.3,
+  bands: ['B4', 'B3', 'B2'],
+};
 
 //Visualisasi Citra
-Map.addLayer(senRGBTrue, RGBparam, 'Jawa_S2A_True');
+Map.addLayer(S2A_dataset, senRGBTrue, 'RGB');
