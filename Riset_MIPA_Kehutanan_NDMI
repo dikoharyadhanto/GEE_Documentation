@@ -1,0 +1,43 @@
+// -------------------------------------------------- NDMI RIAU ---------------------------------------------------------------------
+
+var DAS_AOI_GEOgrafis = ee.FeatureCollection('users/dikoharyadhanto74/DAS_AOI_GEOgrafis');
+DAS_AOI_GEOgrafis = DAS_AOI_GEOgrafis.geometry();
+Map.centerObject(DAS_AOI_GEOgrafis);
+Map.addLayer(DAS_AOI_GEOgrafis, {color:'red'}, 'AOI');
+
+
+//---------------Menggunakan Citra yang sudah dikalibrasi (TOA Reflectance)---------------------------------
+
+// Membuat fungsi cloud mask
+var maskL8 = function(image) { // var maskL8 berisi fungsi untuk melakukan masking pixel
+  var qa = image.select('BQA'); //yang dimasking pixel2 yang beracuan di layer BQA
+  var mask = qa.bitwiseAnd(1<<4).eq(0); // pixel2 tersebut memiliki kode 1 - 4 akan dibolong jadi 0 nilainya
+  return image.updateMask(mask); //pixel2 yg bolong tersebut ditambal sama perekaman lain
+}
+
+//Menentukan ID Citra, waktu perekaman, fungsi cloud masking, fungsi reducer dan geomer 
+var L8REF = ee.ImageCollection("LANDSAT/LC08/C01/T1_RT_TOA")
+.filterDate('2015-09-01','2016-05-30')
+.map(maskL8) //terapkan fungsi maskL8
+.median() // fungsi reducer
+.clip(DAS_AOI_GEOgrafis) //potong seluas area 'geometry'
+
+//Menentukan Composite Band yang Digunakan
+var B5 = L8REF.select(['B5']);
+var B6 = L8REF.select(['B6']);
+var NDMI = (B5.subtract(B6)).divide((B5.add(B6)));
+
+//Menentukan range nilai band dan mode
+var NDMIparam = { min: -1, max: 1, palette: ['red', 'white', 'blue']};
+
+//Visualisasi Citra
+Map.addLayer(NDMI, NDMIparam, 'NDMI');
+
+//----------Export Citra---------------
+Export.image.toDrive({
+  image: NDMI,
+  description: 'NDMI',
+  scale: 10,
+  maxPixels: 600000000,
+  region: DAS_AOI_GEOgrafis
+});
