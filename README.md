@@ -12,7 +12,7 @@ Google Earth Engine Code Documentation
 | 6       | [Cloud Mask Sentinel 2A](https://github.com/dikoharyadhanto/GEE_Documentation/blob/e2d68dfff5f2e31de076da11902a08ce0349e227/005B-Cloud_Mask_S2A)                    |
 | 7       | [Radiometrik Reflektan](https://github.com/dikoharyadhanto/GEE_Documentation/blob/e2d68dfff5f2e31de076da11902a08ce0349e227/006A-Radiometrik_Reflektan_L8)           |
 | 8       | [Radiometrik Radiance](https://github.com/dikoharyadhanto/GEE_Documentation/blob/e2d68dfff5f2e31de076da11902a08ce0349e227/006B-Radiometrik_Radiance_IR_L8)          |
-| 9       | [Download Data Curah Hujan](https://github.com/dikoharyadhanto/GEE_Documentation/blob/e2d68dfff5f2e31de076da11902a08ce0349e227/006B-Radiometrik_Radiance_IR_L8)          |
+| 9       | [Download Data Curah Hujan](https://github.com/dikoharyadhanto/GEE_Documentation/blob/828826e32703b05e1010acc33fad3198e5317244/007-Download_CurahHujan)          |
 
 ## PDF File
 1. [Modul Pelatihan Otomatisasi PL-GEE-BIG](https://raw.githubusercontent.com/dikoharyadhanto/GEE_Documentation/e2d68dfff5f2e31de076da11902a08ce0349e227/MODUL_PELATIHAN_Otomatisasi%20PL_GEE_BIG_101121.pdf)
