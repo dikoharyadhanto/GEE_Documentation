@@ -16,3 +16,8 @@ Google Earth Engine Code Documentation
 
 ## PDF File
 1. [Modul Pelatihan Otomatisasi PL-GEE-BIG](https://raw.githubusercontent.com/dikoharyadhanto/GEE_Documentation/e2d68dfff5f2e31de076da11902a08ce0349e227/MODUL_PELATIHAN_Otomatisasi%20PL_GEE_BIG_101121.pdf)
+
+## Google Earth Engine for Python
+| **No**  | **Content**                                                                                                                                                         |
+| ------  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1       | [Add Basemap Layer](https://github.com/dikoharyadhanto/GEE_Documentation/blob/9baa6f8cdc80266f4bd97da52e376b5bc73aae43/GEE_For_Python/001_Add_Basemap.ipynb)        |
