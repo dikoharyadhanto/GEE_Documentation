@@ -17,7 +17,7 @@ Google Earth Engine Code Documentation
 
 ## PDF File
 1. [Modul Pelatihan Otomatisasi PL-GEE-BIG](https://raw.githubusercontent.com/dikoharyadhanto/GEE_Documentation/e2d68dfff5f2e31de076da11902a08ce0349e227/MODUL_PELATIHAN_Otomatisasi%20PL_GEE_BIG_101121.pdf)
-2. [Modul Pelatihan Dasimetri PL-GEE-BIG] (https://github.com/dikoharyadhanto/GEE_Documentation/blob/b585e885feb6c112bcd03a8ff2c09e48c2ea3e05/MODUL_PELATIHAN_DASIMETRIK_FINAL.pdf)
+2. [Modul Pelatihan Dasimetri PL-GEE-BIG](https://github.com/dikoharyadhanto/GEE_Documentation/blob/b585e885feb6c112bcd03a8ff2c09e48c2ea3e05/MODUL_PELATIHAN_DASIMETRIK_FINAL.pdf)
 
 ## Google Earth Engine for Python
 | **No**  | **Content**                                                                                                                                                         |
