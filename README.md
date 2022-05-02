@@ -24,3 +24,4 @@ Google Earth Engine Code Documentation
 | **No**  | **Content**                                                                                                                                                         |
 | ------  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1       | [Add Basemap Layer](https://github.com/dikoharyadhanto/GEE_Documentation/blob/9baa6f8cdc80266f4bd97da52e376b5bc73aae43/GEE_For_Python/001_Add_Basemap.ipynb)        |
+| 2       | [Inspector](https://github.com/dikoharyadhanto/GEE_Documentation/blob/c4787d5c7bb2995cdac2e8e68bf33bcd65531c9b/gee%20for%20python/002_Inspector.ipynb)        |
