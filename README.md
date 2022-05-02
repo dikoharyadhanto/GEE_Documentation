@@ -23,6 +23,6 @@ Google Earth Engine Code Documentation
 ## Google Earth Engine for Python
 | **No**  | **Content**                                                                                                                                                         |
 | ------  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1       | [Add Basemap Layer](https://github.com/dikoharyadhanto/GEE_Documentation/blob/2373bcba4c042dd4440f95c27c0887633db4eeb6/geemap%20for%20python/001_Add_Basemap_Layer.ipynb)        |
-| 2       | [Inspector](https://github.com/dikoharyadhanto/GEE_Documentation/blob/c4787d5c7bb2995cdac2e8e68bf33bcd65531c9b/gee%20for%20python/002_Inspector.ipynb)        |
-| 3       | [Split Panel Map](https://github.com/dikoharyadhanto/GEE_Documentation/blob/9372e9ebf7e2d53dc0b1901cd29f30a062ab02fd/geemap%20for%20python/003_Split_Panel_Map.ipynb)        |
+| 1       | [Using Basemaps in geemap and ipyleaflet for Interactive Mapping with Earth Engine](https://github.com/dikoharyadhanto/GEE_Documentation/blob/2373bcba4c042dd4440f95c27c0887633db4eeb6/geemap%20for%20python/001_Add_Basemap_Layer.ipynb)        |
+| 2       | [Inspector Tool for Earth Engine Python API](https://github.com/dikoharyadhanto/GEE_Documentation/blob/c4787d5c7bb2995cdac2e8e68bf33bcd65531c9b/gee%20for%20python/002_Inspector.ipynb)        |
+| 3       | [Creating a Split-Panel Map for Visualizing Earth Engine Data](https://github.com/dikoharyadhanto/GEE_Documentation/blob/9372e9ebf7e2d53dc0b1901cd29f30a062ab02fd/geemap%20for%20python/003_Split_Panel_Map.ipynb)        |
