@@ -30,3 +30,5 @@ Google Earth Engine Code Documentation
 | 2       | [Inspector Tool for Earth Engine Python API](https://github.com/dikoharyadhanto/GEE_Documentation/blob/c4787d5c7bb2995cdac2e8e68bf33bcd65531c9b/gee%20for%20python/002_Inspector.ipynb)        | Add Earth Engine Python script |
 | 3       | [Creating a Split-Panel Map for Visualizing Earth Engine Data](https://github.com/dikoharyadhanto/GEE_Documentation/blob/9372e9ebf7e2d53dc0b1901cd29f30a062ab02fd/geemap%20for%20python/003_Split_Panel_Map.ipynb)        | Add Earth Split Map |
 |        |         | How to Get those datasets from Notebook |
+| 4       | [Using Drawing Tools to Interact with Earth Engine Data](https://github.com/dikoharyadhanto/GEE_Documentation/blob/dd1dfe3e994637c24185168100ff6b48e75d3381/geemap%20for%20python/004_Drawing_Tools_to_Interact_GEE.ipynb)        | Draw Features |
+|        |         | Select Data Layers Just Intersect with Draw Features |
